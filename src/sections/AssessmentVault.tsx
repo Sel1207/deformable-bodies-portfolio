@@ -35,7 +35,7 @@ const quizzes = [
     title: 'Quiz 2', 
     score: '92/100', 
     date: 'January 21, 2026', 
-    notes: 'Axial Loading and Torsion', 
+    notes: 'Thermal Stress', 
     pages: 1,
     isTextOnly: true,
     reflection: 'Quiz #2 was better than my Quiz #1, as I got a score of 92, which was almost twice my score from the previous quiz. Though this topic was much easier, being solely focused on thermal stress, it was still a good feeling to get a good score.'
