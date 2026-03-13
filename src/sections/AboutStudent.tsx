@@ -100,7 +100,7 @@ export default function AboutStudent() {
                     <a href="https://github.com/Sel1207" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 text-[10px] font-bold uppercase tracking-wider bg-secondary border border-border/60 text-muted-foreground rounded hover:bg-primary hover:text-white hover:border-primary transition-all">
                       <Github className="w-3.5 h-3.5" /> GitHub
                     </a>
-                    <a href="linkedin.com/in/karl-philip-espino-388894346" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 text-[10px] font-bold uppercase tracking-wider bg-secondary border border-border/60 text-muted-foreground rounded hover:bg-primary hover:text-white hover:border-primary transition-all">
+                    <a href="https://www.linkedin.com/in/karl-philip-espino-388894346/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 text-[10px] font-bold uppercase tracking-wider bg-secondary border border-border/60 text-muted-foreground rounded hover:bg-primary hover:text-white hover:border-primary transition-all">
                       <Linkedin className="w-3.5 h-3.5" /> LinkedIn
                     </a>
                   </div>
