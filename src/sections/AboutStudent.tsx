@@ -116,7 +116,7 @@ export default function AboutStudent() {
               >
                 <Globe className="w-8 h-8 text-primary mb-4" />
                 <h4 className="text-xl font-bold text-foreground mb-2 leading-tight">Expanded Portfolio</h4>
-                <p className="text-xs text-muted-foreground mb-6">Access my complete digital portfolio for a broader look at my projects, CAD designs, and achievements.</p>
+                <p className="text-xs text-muted-foreground mb-6">Access my complete digital portfolio for a broader look at my projects, CAD designs, and achievements. PS. This is a work in progress.</p>
                 <a 
                   href="https://karl-philip-espino.vercel.app/" 
                   target="_blank" 
