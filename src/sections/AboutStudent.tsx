@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { 
   User, ExternalLink, QrCode, Mail, Github, Linkedin, Globe,
-  Sparkles, Code2, Cpu, FileText
+  Sparkles, Code2, Cpu, FileText, FileCheck
 } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 
@@ -57,38 +57,50 @@ export default function AboutStudent() {
               className="engineering-card p-6 md:p-8 bg-card border border-border/60 rounded-xl"
               whileHover={{ y: -5, boxShadow: '0 20px 40px -15px rgba(0, 0, 0, 0.2)' }}
             >
-              <div className="flex flex-col sm:flex-row items-start gap-6">
-                <div className="w-24 h-24 rounded-2xl bg-primary/10 border-2 border-primary/20 flex items-center justify-center shrink-0 shadow-inner overflow-hidden">
-                  <User className="w-12 h-12 text-primary/50" />
-                </div>
+              <div className="flex flex-col sm:flex-row items-start gap-8">
                 
-                <div className="flex-1 w-full">
+                {/* --- 2X2 PORTRAIT IMAGE BLOCK --- */}
+<div className="relative group shrink-0 mx-auto sm:mx-0">
+  <div className="absolute -inset-1 bg-gradient-to-r from-primary to-blue-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-500" />
+  <div className="relative w-32 h-32 sm:w-40 sm:h-40 rounded-2xl bg-primary/10 border-2 border-primary/20 flex items-center justify-center overflow-hidden shadow-xl">
+    <img 
+      src="/images/Espino_2x2.jpg" 
+      alt="Karl Philip C. Espino" 
+      className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-500 group-hover:scale-110"
+      onError={(e) => {
+        e.currentTarget.src = "https://placehold.co/200x200/eeeeee/999999?text=2x2+Photo";
+      }}
+    />
+  </div>
+</div>
+                
+                <div className="flex-1 w-full text-center sm:text-left">
                   <h3 className="text-3xl font-black text-foreground tracking-tight uppercase">Karl Philip C. Espino</h3>
-                  <p className="text-[10px] font-mono text-primary uppercase tracking-widest mt-2 flex items-center gap-1.5 mb-6">
-                    <Sparkles className="w-3.5 h-3.5" /> Mechanical Engineering Student
+                  <p className="text-[10px] font-mono text-primary uppercase tracking-widest mt-2 flex items-center justify-center sm:justify-start gap-1.5 mb-6">
+                    <Sparkles className="w-3.5 h-3.5" /> BS/MS Electrical Engineering Student
                   </p>
                   
                   {/* Bio block with engineering side-border */}
-                  <div className="relative p-5 bg-secondary/20 rounded-r-lg border-y border-r border-border/40 mb-6">
+                  <div className="relative p-5 bg-secondary/20 rounded-r-lg border-y border-r border-border/40 mb-6 text-left">
                     <div className="absolute top-0 left-0 w-1 h-full bg-primary rounded-l-lg" />
                     <p className="text-sm text-muted-foreground leading-relaxed italic">
-                      "I am a dedicated Mechanical Engineering student with a passion for understanding how materials 
-                      and structures behave under various loading conditions. Through this course on Fundamentals of 
-                      Deformable Bodies, I have developed a strong foundation in stress analysis, strain calculations, 
-                      and structural mechanics. My goal is to apply these principles to create innovative, 
-                      safe, and efficient mechanical systems that contribute to technological advancement."
+                      "I am a dedicated Electrical Engineering student at Mapúa University with a passion for 
+                      power systems and industrial automation. Through my academic journey, I have developed 
+                      a strong foundation in electrical design, protective relaying, and system control. 
+                      My goal is to bridge the gap between traditional power infrastructure and modern 
+                      digital automation to create more resilient and efficient energy solutions."
                     </p>
                   </div>
 
                   {/* Social/Contact Links */}
-                  <div className="flex flex-wrap gap-3">
-                    <a href="mailto:your.email@example.com" className="inline-flex items-center gap-2 px-4 py-2 text-[10px] font-bold uppercase tracking-wider bg-secondary border border-border/60 text-muted-foreground rounded hover:bg-primary hover:text-white hover:border-primary transition-all">
+                  <div className="flex flex-wrap justify-center sm:justify-start gap-3">
+                    <a href="mailto:kpcespino@mymail.mapua.edu.ph" className="inline-flex items-center gap-2 px-4 py-2 text-[10px] font-bold uppercase tracking-wider bg-secondary border border-border/60 text-muted-foreground rounded hover:bg-primary hover:text-white hover:border-primary transition-all">
                       <Mail className="w-3.5 h-3.5" /> Email
                     </a>
-                    <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 text-[10px] font-bold uppercase tracking-wider bg-secondary border border-border/60 text-muted-foreground rounded hover:bg-primary hover:text-white hover:border-primary transition-all">
+                    <a href="https://github.com/Sel1207" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 text-[10px] font-bold uppercase tracking-wider bg-secondary border border-border/60 text-muted-foreground rounded hover:bg-primary hover:text-white hover:border-primary transition-all">
                       <Github className="w-3.5 h-3.5" /> GitHub
                     </a>
-                    <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 text-[10px] font-bold uppercase tracking-wider bg-secondary border border-border/60 text-muted-foreground rounded hover:bg-primary hover:text-white hover:border-primary transition-all">
+                    <a href="linkedin.com/in/karl-philip-espino-388894346" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-4 py-2 text-[10px] font-bold uppercase tracking-wider bg-secondary border border-border/60 text-muted-foreground rounded hover:bg-primary hover:text-white hover:border-primary transition-all">
                       <Linkedin className="w-3.5 h-3.5" /> LinkedIn
                     </a>
                   </div>
@@ -98,8 +110,6 @@ export default function AboutStudent() {
 
             {/* Bottom Row inside the Left Column */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              
-              {/* Portfolio Link CTA */}
               <motion.div 
                 className="engineering-card p-6 bg-gradient-to-br from-primary/5 to-transparent border border-primary/20 rounded-xl flex flex-col justify-center"
                 whileHover={{ y: -3 }}
@@ -117,16 +127,15 @@ export default function AboutStudent() {
                 </a>
               </motion.div>
 
-              {/* Technical Skills */}
               <motion.div 
                 className="engineering-card p-6 bg-card border border-border/60 rounded-xl"
                 whileHover={{ y: -3 }}
               >
                 <h4 className="text-sm font-black text-foreground uppercase tracking-widest flex items-center gap-2 mb-5">
-                  <Code2 className="w-4 h-4 text-accent" /> Tech Stack & Skills
+                  <Code2 className="w-4 h-4 text-accent" /> Engineering Skills
                 </h4>
                 <div className="flex flex-wrap gap-2">
-                  {['Structural Analysis', 'CAD Design', 'MATLAB', 'SolidWorks', 'ANSYS', 'Python', 'Mechanics', 'Problem Solving'].map((skill) => (
+                  {['Power Protection', 'DIALux', 'MATLAB', 'FluidSim', 'AutoCAD', 'Python', 'PLC', 'System Design'].map((skill) => (
                     <span 
                       key={skill}
                       className="px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider bg-secondary text-muted-foreground rounded-sm border border-border/40 hover:border-accent/40 hover:text-accent cursor-default transition-colors"
@@ -137,7 +146,6 @@ export default function AboutStudent() {
                 </div>
               </motion.div>
             </div>
-
           </motion.div>
 
           {/* Right Column (QR Code & Stats) */}
@@ -202,14 +210,14 @@ export default function AboutStudent() {
 
               <div className="mt-auto grid grid-cols-2 gap-3">
                 <div className="flex flex-col items-center justify-center p-4 bg-secondary/30 rounded-lg border border-border/40">
-                  <FileText className="w-5 h-5 text-primary mb-2" />
-                  <p className="text-2xl font-black text-foreground">6</p>
+                  <FileCheck className="w-5 h-5 text-primary mb-2" />
+                  <p className="text-2xl font-black text-foreground">7</p>
                   <p className="text-[9px] font-bold text-muted-foreground uppercase tracking-widest mt-1">SEUs Finished</p>
                 </div>
                 <div className="flex flex-col items-center justify-center p-4 bg-secondary/30 rounded-lg border border-border/40">
                   <Cpu className="w-5 h-5 text-accent mb-2" />
-                  <p className="text-2xl font-black text-foreground">8</p>
-                  <p className="text-[9px] font-bold text-muted-foreground uppercase tracking-widest mt-1">Assessments</p>
+                  <p className="text-2xl font-black text-foreground">5</p>
+                  <p className="text-[9px] font-bold text-muted-foreground uppercase tracking-widest mt-1">Quizzes Finished</p>
                 </div>
               </div>
             </motion.div>

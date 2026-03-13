@@ -41,7 +41,7 @@ const seuData: SEUItem[] = [
     title: 'SEU #3: Torsion',
     description: 'Study of twisting moments and shear stress distribution in circular shafts.',
     reflection: 'The torsion module provided deep insights into how circular shafts respond to twisting moments. I mastered the torsion formula τ = Tρ/J and learned to calculate the angle of twist using θ = TL/JG.',
-    pages: ['Page 1', 'Page 2', 'Page 3', 'Page 4'],
+    pages: ['Page 1'],
     pageLabels: ['Torsion Theory', 'Shear Stress Formula', 'Angle of Twist', 'Power Transmission']
   },
   {
@@ -49,7 +49,7 @@ const seuData: SEUItem[] = [
     title: 'SEU #4: Shear and Moment Diagrams',
     description: 'Construction and interpretation of shear force and bending moment diagrams.',
     reflection: 'Creating shear and moment diagrams has become one of my strongest skills. Understanding the relationships between load, shear, and moment allowed me to sketch diagrams quickly and identify critical sections.',
-    pages: ['Page 1', 'Page 2', 'Page 3', 'Page 4', 'Page 5', 'Page 6'],
+    pages: ['Page 1', 'Page 2', 'Page 3'],
     pageLabels: ['Fundamentals', 'Load-Shear-Moment Relations', 'Simple Beams', 'Cantilever Beams', 'Overhanging Beams', 'Complex Loading']
   },
   {
@@ -57,7 +57,7 @@ const seuData: SEUItem[] = [
     title: 'SEU #5: Bending Stresses',
     description: 'Analysis of normal and shear stresses in beams under bending loads.',
     reflection: 'This SEU deepened my understanding of flexural behavior. The flexure formula σ = My/I became second nature as I calculated bending stresses at various points in cross-sections.',
-    pages: ['Page 1', 'Page 2', 'Page 3', 'Page 4', 'Page 5'],
+    pages: ['Page 1'],
     pageLabels: ['Bending Theory', 'Flexure Formula', 'Section Modulus', 'Transverse Shear', 'Combined Stresses']
   },
   {
@@ -65,7 +65,7 @@ const seuData: SEUItem[] = [
     title: 'SEU #6: Deflection of Beams',
     description: 'Calculation of beam deflection using various methods including integration and superposition.',
     reflection: 'The deflection module introduced me to multiple methods for determining beam deformation, providing exact solutions and helping understand the relationship between moment and curvature.',
-    pages: ['Page 1', 'Page 2', 'Page 3', 'Page 4', 'Page 5', 'Page 6'],
+    pages: ['Page 1'],
     pageLabels: ['Deflection Basics', 'Double Integration', 'Moment-Area Method', 'Superposition', 'Statically Indeterminate', 'Design Applications']
   }
 ];

@@ -20,11 +20,11 @@ interface Assessment {
 }
 
 const quizzes = [
-  { id: 1, title: 'Quiz 1', score: '--/100', date: 'TBD', notes: 'Stress and Strain fundamentals', pages: 2 },
-  { id: 2, title: 'Quiz 2', score: '--/100', date: 'TBD', notes: 'Axial Loading and Torsion', pages: 2 },
-  { id: 3, title: 'Quiz 3', score: '--/100', date: 'TBD', notes: 'Shear and Moment Diagrams', pages: 3 },
-  { id: 4, title: 'Quiz 4', score: '--/100', date: 'TBD', notes: 'Bending Stresses', pages: 2 },
-  { id: 5, title: 'Quiz 5', score: '--/100', date: 'TBD', notes: 'Beam Deflection', pages: 3 },
+  { id: 1, title: 'Quiz 1', score: '--/100', date: 'TBD', notes: 'Stress and Strain fundamentals', pages: 1 },
+  { id: 2, title: 'Quiz 2', score: '92/100', date: 'January 21, 2026', notes: 'Axial Loading and Torsion', pages: 1 },
+  { id: 3, title: 'Quiz 3', score: '23/100', date: 'February 16, 2026', notes: 'Shear and Moment Diagrams', pages: 4 },
+  { id: 4, title: 'Quiz 4', score: '--/100', date: 'March 04, 2026', notes: 'Bending Stresses', pages: 1 },
+  { id: 5, title: 'Quiz 5', score: '86/100', date: 'March 09, 2026', notes: 'Beam Deflection', pages: 8 },
 ];
 
 const classAssessments: Assessment[] = [
@@ -43,7 +43,7 @@ const classAssessments: Assessment[] = [
     score: '--/100',
     date: 'TBD',
     topics: ['Torsion', 'Shear Diagrams', 'Moment Diagrams', 'Bending Stresses'],
-    pages: 5,
+    pages: 3,
     reflection: 'The second assessment covered more advanced topics and truly tested my comprehensive understanding. The shear and moment diagram problems required systematic approaches and careful verification at each step. This assessment reinforced the importance of consistent practice.'
   }
 ];
@@ -296,11 +296,11 @@ export default function AssessmentVault() {
                     <Dialog>
                       <DialogTrigger asChild>
                         <button className="px-8 py-3 bg-primary text-white font-black text-xs uppercase tracking-widest rounded-full hover:scale-105 active:scale-95 transition-all shadow-xl shadow-primary/25 flex items-center gap-2">
-                          <ImageIcon size={16} /> View Final Graded Paper
+                          <ImageIcon size={16} /> View Paper
                         </button>
                       </DialogTrigger>
                       {/* Passing folder="exams" and prefix="final" for the final exam */}
-                      <DocumentViewer title="Final Examination" totalPages={10} id={1} folder="exams" prefix="final" />
+                      <DocumentViewer title="Final Examination" totalPages={2} id={1} folder="exams" prefix="final" />
                     </Dialog>
                     <div className="px-8 py-3 bg-background border border-border/60 rounded-full font-black text-xs uppercase flex items-center gap-2">
                       <Trophy size={16} className="text-primary" /> Grade: --/100
