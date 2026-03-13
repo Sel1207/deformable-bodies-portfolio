@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   ClipboardList, FileCheck, GraduationCap, Trophy, ChevronDown,
   Image as ImageIcon, Percent, Calendar, Target, TrendingUp,
-  ChevronLeft, ChevronRight, ZoomIn, Search
+  ChevronLeft, ChevronRight, ZoomIn, Search, AlignLeft
 } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -20,8 +20,26 @@ interface Assessment {
 }
 
 const quizzes = [
-  { id: 1, title: 'Quiz 1', score: '--/100', date: 'TBD', notes: 'Stress and Strain fundamentals', pages: 1 },
-  { id: 2, title: 'Quiz 2', score: '92/100', date: 'January 21, 2026', notes: 'Axial Loading and Torsion', pages: 1 },
+  { 
+    id: 1, 
+    title: 'Quiz 1', 
+    score: '50/100', // Updated score based on your reflection
+    date: 'TBD', 
+    notes: 'Stress and Strain fundamentals', 
+    pages: 1,
+    isTextOnly: true,
+    reflection: 'Quiz #1 really tested me because it showed me how much I was not putting much effort into this course. I got a score of I think around 50+ out of 100, so I was really not that much thrilled. Still, I took the course and prepared for the next quiz.'
+  },
+  { 
+    id: 2, 
+    title: 'Quiz 2', 
+    score: '92/100', 
+    date: 'January 21, 2026', 
+    notes: 'Axial Loading and Torsion', 
+    pages: 1,
+    isTextOnly: true,
+    reflection: 'Quiz #2 was better than my Quiz #1, as I got a score of 92, which was almost twice my score from the previous quiz. Though this topic was much easier, being solely focused on thermal stress, it was still a good feeling to get a good score.'
+  },
   { id: 3, title: 'Quiz 3', score: '23/100', date: 'February 16, 2026', notes: 'Shear and Moment Diagrams', pages: 4 },
   { id: 4, title: 'Quiz 4', score: '--/100', date: 'March 04, 2026', notes: 'Bending Stresses', pages: 1 },
   { id: 5, title: 'Quiz 5', score: '86/100', date: 'March 09, 2026', notes: 'Beam Deflection', pages: 8 },
@@ -249,7 +267,11 @@ export default function AssessmentVault() {
                       <div className="flex justify-between items-start">
                         <div className="flex gap-3">
                           <div className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center group-hover:bg-primary/10 transition-colors">
-                            <ClipboardList className="w-5 h-5 text-muted-foreground group-hover:text-primary" />
+                            {quiz.isTextOnly ? (
+                              <AlignLeft className="w-5 h-5 text-muted-foreground group-hover:text-primary" />
+                            ) : (
+                              <ClipboardList className="w-5 h-5 text-muted-foreground group-hover:text-primary" />
+                            )}
                           </div>
                           <div>
                             <h4 className="font-bold group-hover:text-primary transition-colors">{quiz.title}</h4>
@@ -263,7 +285,32 @@ export default function AssessmentVault() {
                       </div>
                     </motion.div>
                   </DialogTrigger>
-                  <DocumentViewer title={quiz.title} totalPages={quiz.pages} id={quiz.id} folder="quizzes" prefix="quiz" />
+                  
+                  {/* Conditionally Render Content based on isTextOnly flag */}
+                  {quiz.isTextOnly ? (
+                    <DialogContent className="max-w-md bg-background/95 backdrop-blur-xl border-border/40 p-6 sm:p-8">
+                      <DialogHeader className="mb-4">
+                        <DialogTitle className="flex items-center gap-2 text-primary font-black italic tracking-tight uppercase">
+                          <TrendingUp className="w-5 h-5" />
+                          {quiz.title} / Reflection
+                        </DialogTitle>
+                      </DialogHeader>
+                      <div className="p-5 bg-secondary/30 rounded-xl border border-dashed border-border/60">
+                        <p className="text-sm text-muted-foreground leading-relaxed italic relative">
+                          <span className="text-primary text-2xl absolute -top-2 -left-2 opacity-30">"</span>
+                          {quiz.reflection}
+                          <span className="text-primary text-2xl absolute -bottom-4 -right-1 opacity-30">"</span>
+                        </p>
+                      </div>
+                      <div className="mt-4 flex justify-between items-center text-[10px] font-mono uppercase tracking-widest text-muted-foreground border-t border-border/40 pt-4">
+                        <span>Score: {quiz.score}</span>
+                        <span>{quiz.date}</span>
+                      </div>
+                    </DialogContent>
+                  ) : (
+                    <DocumentViewer title={quiz.title} totalPages={quiz.pages} id={quiz.id} folder="quizzes" prefix="quiz" />
+                  )}
+
                 </Dialog>
               ))}
             </TabsContent>
@@ -299,7 +346,6 @@ export default function AssessmentVault() {
                           <ImageIcon size={16} /> View Paper
                         </button>
                       </DialogTrigger>
-                      {/* Passing folder="exams" and prefix="final" for the final exam */}
                       <DocumentViewer title="Final Examination" totalPages={2} id={1} folder="exams" prefix="final" />
                     </Dialog>
                     <div className="px-8 py-3 bg-background border border-border/60 rounded-full font-black text-xs uppercase flex items-center gap-2">

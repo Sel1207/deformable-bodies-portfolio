@@ -22,51 +22,51 @@ interface SEUItem {
 const seuData: SEUItem[] = [
   {
     id: 1,
-    title: 'SEU #1: Stress and Strain Analysis',
-    description: 'Introduction to fundamental concepts of stress, strain, and material behavior under load.',
-    reflection: 'Through this SEU, I developed a solid understanding of the fundamental relationship between stress and strain in deformable bodies. I learned how to calculate normal and shear stresses, understand the stress-strain diagram, and apply Hooke\'s Law to determine material behavior under various loading conditions.',
+    title: 'SEU #1',
+    description: 'Analysis of fundamental normal, shear, and bearing stresses in structural connections and trusses.',
+    reflection: 'Working through SEU #1 highlighted the importance of carefully evaluating multiple stress types—like shear in rivets and normal stress in trusses—to ensure structural integrity. It was a challenging but rewarding application that effectively bridged theoretical mechanics with practical engineering design.',
     pages: ['Page 1', 'Page 2', 'Page 3', 'Page 4'],
-    pageLabels: ['Cover & Objectives', 'Theory & Formulas', 'Sample Problems', 'Exercises & Solutions']
+    pageLabels: ['Normal Stress', 'Shear & Bearing Stresses', 'Bolted & Riveted Connections', 'Truss Analysis']
   },
   {
     id: 2,
-    title: 'SEU #2: Axial Loading',
-    description: 'Analysis of members subjected to axial forces, including deformation and stress distribution.',
-    reflection: 'This SEU enhanced my ability to analyze members under axial loading conditions. I learned to calculate axial deformations using the deformation formula δ = PL/AE and solve statically indeterminate problems using compatibility conditions.',
-    pages: ['Page 1', 'Page 2', 'Page 3', 'Page 4', 'Page 5'],
-    pageLabels: ['Introduction', 'Axial Stress Analysis', 'Deformation Calculations', 'Statically Indeterminate', 'Practice Problems']
+    title: 'SEU #2',
+    description: 'Evaluation of axial deformation and displacement compatibility in multi-material rigid bar systems.',
+    reflection: 'Working on SEU #2 really deepened my understanding of how composite materials and rigid bar systems behave under load, particularly when balancing specific stress limits with strict deformation constraints. It was incredibly satisfying to apply compatibility conditions to figure out exactly how these multi-material structures stretch, compress, and shift together.',
+    pages: ['Page 1', 'Page 2', 'Page 3'],
+    pageLabels: ['Axial Deformation', 'Rigid Bar Systems', 'Compatibility Equations']
   },
   {
     id: 3,
-    title: 'SEU #3: Torsion',
-    description: 'Study of twisting moments and shear stress distribution in circular shafts.',
-    reflection: 'The torsion module provided deep insights into how circular shafts respond to twisting moments. I mastered the torsion formula τ = Tρ/J and learned to calculate the angle of twist using θ = TL/JG.',
-    pages: ['Page 1'],
-    pageLabels: ['Torsion Theory', 'Shear Stress Formula', 'Angle of Twist', 'Power Transmission']
+    title: 'SEU #3',
+    description: 'Analysis of thermal stresses and constrained deformations in single and composite material systems subjected to temperature variations.',
+    reflection: 'Completing SEU #3 made me appreciate how dramatically temperature fluctuations can impact rigidly constrained structures, sometimes even inducing stresses greater than the applied physical loads themselves. It was an eye-opening exercise in learning how to carefully calculate and balance thermal expansion or contraction with mechanical forces to find a safe equilibrium.',
+    pages: ['Page 1', 'Page 2', 'Page 3', 'Page 4'],
+    pageLabels: ['Thermal Expansion Fundamentals', 'Constrained Deformations', 'Gap Closure Problems', 'Composite Bar Thermal Stress']
   },
   {
     id: 4,
-    title: 'SEU #4: Shear and Moment Diagrams',
-    description: 'Construction and interpretation of shear force and bending moment diagrams.',
-    reflection: 'Creating shear and moment diagrams has become one of my strongest skills. Understanding the relationships between load, shear, and moment allowed me to sketch diagrams quickly and identify critical sections.',
+    title: 'SEU #4',
+    description: 'Investigation of composite action, static indeterminacy, and thermal effects in axially loaded members.',
+    reflection: 'Working through SEU #4 was a great exercise in understanding how different materials interact under constraints, especially when factoring in complex variables like thermal expansion alongside axial loads. It really highlighted the real-world problems of designing composite structures—like reinforced concrete columns and bimetallic assemblies—to safely share loads without exceeding permissible stress limits.',
     pages: ['Page 1', 'Page 2', 'Page 3'],
-    pageLabels: ['Fundamentals', 'Load-Shear-Moment Relations', 'Simple Beams', 'Cantilever Beams', 'Overhanging Beams', 'Complex Loading']
+    pageLabels: ['Composite Concentric Shells', 'Reinforced Columns', 'Combined Axial & Thermal Loads']
   },
   {
     id: 5,
-    title: 'SEU #5: Bending Stresses',
-    description: 'Analysis of normal and shear stresses in beams under bending loads.',
-    reflection: 'This SEU deepened my understanding of flexural behavior. The flexure formula σ = My/I became second nature as I calculated bending stresses at various points in cross-sections.',
-    pages: ['Page 1'],
-    pageLabels: ['Bending Theory', 'Flexure Formula', 'Section Modulus', 'Transverse Shear', 'Combined Stresses']
+    title: 'SEU #5',
+    description: 'Assessment of flexural stresses, bending moments, and load-bearing capacity in beams.',
+    reflection: 'Working through SEU #5 provided valuable hands-on practice in evaluating flexural stress and finding critical bending moments in beams subjected to combined loads. It was highly rewarding to apply these principles to determine the exact cross-sectional dimensions and maximum loads a structure can safely handle without failing.',
+    pages: ['Page 1', 'Page 2'],
+    pageLabels: ['Flexural Stress & Sizing', 'Overhanging Beam Analysis']
   },
   {
     id: 6,
-    title: 'SEU #6: Deflection of Beams',
-    description: 'Calculation of beam deflection using various methods including integration and superposition.',
-    reflection: 'The deflection module introduced me to multiple methods for determining beam deformation, providing exact solutions and helping understand the relationship between moment and curvature.',
-    pages: ['Page 1'],
-    pageLabels: ['Deflection Basics', 'Double Integration', 'Moment-Area Method', 'Superposition', 'Statically Indeterminate', 'Design Applications']
+    title: 'SEU #6',
+    description: 'Determination of beam deflection and elastic curves utilizing the Double Integration Method.',
+    reflection: 'Working on SEU #6 deepened my appreciation for the Double Integration Method when calculating beam deflections under discontinuous loads. It was a rigorous but satisfying process to systematically apply boundary conditions and integrate moment equations to pinpoint the exact flexural rigidity-deflection product at the midspan.',
+    pages: ['Page 1', 'Page 2'],
+    pageLabels: ['Double Integration Method (DIM)', 'Flexural Rigidity-Deflection Product']
   }
 ];
 
